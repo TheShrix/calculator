@@ -10,27 +10,27 @@
   <body>
     <main id="calculator">
         <div id="display">
-            <div id="previous-operand"></div>
-            <div id="current-operand"></div>
+            <div id="previous-operand" data-previousOp></div>
+            <div id="current-operand" data-currentOp></div>
         </div>
-        <button class="clear" id="span-two">AC</button>
-        <button class="clear">Del</button>
-        <button class="operator">/</button>
-        <button class="operand">7</button>
-        <button class="operand">8</button>
-        <button class="operand">9</button>
-        <button class="operator">X</button>
-        <button class="operand">4</button>
-        <button class="operand">5</button>
-        <button class="operand">6</button>
-        <button class="operator">-</button>
-        <button class="operand">1</button>
-        <button class="operand">2</button>
-        <button class="operand">3</button>
-        <button class="operator">+</button>
-        <button class="operand" id="span-two">0</button>
-        <button class="operand">.</button>
-        <button class="operator">=</button>
+        <button class="clear" id="span-two" data-allClear>AC</button>
+        <button class="clear" data-delete=>Del</button>
+        <button class="operator" data-operator=>/</button>
+        <button class="operand" data-operand>7</button>
+        <button class="operand" data-operand>8</button>
+        <button class="operand" data-operand>9</button>
+        <button class="operator" data-operator>X</button>
+        <button class="operand" data-operand>4</button>
+        <button class="operand" data-operand>5</button>
+        <button class="operand" data-operand>6</button>
+        <button class="operator" data-operator>-</button>
+        <button class="operand" data-operand>1</button>
+        <button class="operand" data-operand>2</button>
+        <button class="operand" data-operand>3</button>
+        <button class="operator" data-operator>+</button>
+        <button class="operand" id="span-two" data-operand>0</button>
+        <button class="operand" data-operand>.</button>
+        <button class="operator" data-equals>=</button>
     </main>
     <script src="script.js"></script>
   </body>
