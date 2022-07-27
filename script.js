@@ -18,6 +18,7 @@ let shouldReset = false;
 
 //Event listeners
 
+window.addEventListener('keydown', keyboardInput)
 equalsButton.addEventListener('click', calculate);
 deleteButton.addEventListener('click', deleteNumber);
 allClearButton.addEventListener('click', clear);
@@ -35,6 +36,31 @@ operatorButton.forEach((button) => {
 
 
 //Functions
+
+
+//Keyboard functionality 
+
+function keyboardInput(e) {
+    if (e.key >= 0 || e.key <= 9) appendNumber(e.key);
+    if (e.key === '.') appendNumber(e.key);
+    if (e.key === '=' || 'Enter') calculate()
+    if (e.key === 'Backspace') deleteNumber();
+    if (e.key === 'Escape') clear();
+    if (e.key === '+' || e.key === '-' || e.key === '/' || e.key === '*') {
+        return setOperation(convertOp(e.key));
+    }
+};
+
+function convertOp(keyboardOp) {
+    if (keyboardOp === '+') return '+';
+    if (keyboardOp === '-') return '-';
+    if (keyboardOp === '/') return '/';
+    if (keyboardOp === '*') return '*';
+
+}
+
+
+
 
 
 //Function to call number that is clicked
