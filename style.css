@@ -36,17 +36,21 @@ body {
     grid-column: 1 / -1;
     justify-content: space-around;
     flex-direction: column;
-    padding: 10px;
+    padding:10px;
     word-wrap: break-word;
     word-break: break-all;
+    border-color: rgb(0, 0, 0);
+    border-style: groove;
+    border-radius: 30px;
+    margin-bottom: 3px;
 }
 
-#display #previous-operand {
-    color: blanchedalmond;
+#previous-operand {
+    color: rgb(245, 206, 206);
     font-size: 2rem;
 }
 
-#display #current-operand {
+#current-operand {
     color: white;
     font-size: 3rem;
 }
