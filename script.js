@@ -48,8 +48,10 @@ function appendNumber(number) {
 
 //Function to call operator when clicked
 function setOperation(operator) {
-    if (currentOp !== null) calculate();
-    firstOperand = currentOpText;
+    if (currentOp !== null) {
+        calculate();
+    };
+    firstOperand = currentOpText.textContent;
     currentOp = operator;
     previousOpText.textContent = `${firstOperand} ${currentOp}`;
     shouldReset = true;
@@ -81,16 +83,21 @@ function clear() {
 
 //Function to evaluate numbers and operator called
 function calculate() {
-    if (currentOp === null || shouldReset) return;
+    if (currentOp === null || shouldReset) {
+        return;
+    };    
     if (currentOp === '/' && currentOpText.textContent === '0') {
         alert("Dividing zero is like dividing the number of cookies you have by the amount of friends you have.")
         return;
     }
     nextOperand = currentOpText.textContent;
-    currentOpText.textContent = calculate(currentOp, firstOperand, nextOperand);
+    currentOpText.textContent = operate(currentOp, firstOperand, nextOperand);
     previousOpText.textContent = `${firstOperand} ${currentOp} ${nextOperand}`;
     currentOp = null;
 }
+
+
+
 
 
 
