@@ -99,8 +99,6 @@ function calculate() {
 
 
 
-
-
 //Basic functions for calculator
 function add(a, b) {
     return a + b;
